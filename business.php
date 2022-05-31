@@ -321,8 +321,8 @@ window.onclick = function(event) {
     </div>
     <nav id="navbar" class="navbar">
         <ul>
-        <button   style="background-color:#0ECB81">Buy</button>
-        <button   style="width:auto;background-color:red;">Sell</button>
+        <a style="margin-right:0px;" href="add_item.php"><button   style="background-color:#0ECB81;width:100%;"onclick="add_item.php">Buy</button></a>
+        <a style="padding:10px;margin-right:0px;" href="require_upload.php"><button   style="background-color:red;height:50px;" >Sell</button></a>
 
           <li class="dropdown"><a href="#"><span>Home</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
@@ -389,6 +389,19 @@ window.onclick = function(event) {
 
 
   <main id="main">
+  <div class="container">
+
+<div class="row gy-4">
+
+<section id="services" class="services">
+      <div class="container" style="display: absolute;margin-top:30%">
+      <?php
+      
+      include 'fetch_items.php';
+      ?>
+      
+      
+      <!-- End Service Item -->
 
       <!-- Vendor JS Files -->
   <!-- Vendor JS Files -->
@@ -398,7 +411,7 @@ window.onclick = function(event) {
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
-
+     
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 

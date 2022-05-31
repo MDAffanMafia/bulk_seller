@@ -1,10 +1,10 @@
 <?php
 if($_SERVER["REQUEST_METHOD"]=="POST"){
 include 'database_connectivity.php';
-$username=$_POST['username'];
-$password =$_POST['pass'];
+$username=$_POST['uname'];
+$password =$_POST['psw'];
 
-$sql_Query="SELECT * FROM  user_info WHERE username ='$username' AND password= '$password'";
+$sql_Query="SELECT * FROM  user_data WHERE username ='$username' AND password= '$password'";
 
 
 $result =mysqli_query($connec,$sql_Query);
@@ -19,7 +19,7 @@ if(!$row = $result->fetch_assoc()) {
     $id=$row['Id'];
     $_SESSION['username']=$username;
     $_SESSION['Id'] = $row['Id'];
-      header("Location: home.php");
+      header("Location: index.php");
     }
 
 }
