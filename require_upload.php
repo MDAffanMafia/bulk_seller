@@ -1,19 +1,16 @@
 <?php
 session_start();
-/*
-if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true)
-{
-    header("location: login.php");
-    exit;
+if(!isset($_SESSION['Id'])){
+  header("location: login.php");
 }
-*/
- ?>
 
+
+ ?>
 
  <!DOCTYPE html>
  <head>
    <meta charset="utf-8">
-   <title>Affan</title>
+   <title>Beipaari</title>
    <link rel="stylesheet" href="static/user.css" type="text/css">
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
    <meta charset="utf-8">

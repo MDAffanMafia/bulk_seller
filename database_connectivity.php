@@ -10,6 +10,6 @@ if(! $connec)
     echo"could not connect";
 }
 else{
-    echo"connected";
+    echo"";
 }
 ?>

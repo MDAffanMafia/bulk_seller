@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-
+/*
 if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true)
 {
     echo"
@@ -12,7 +12,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true)
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 
-/* Full-width input fields */
+ Full-width input fields 
 input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
@@ -22,7 +22,7 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
 }
 
-/* Set a style for all buttons */
+ Set a style for all buttons 
 button {
   background-color: #04AA6D;
   color: white;
@@ -37,14 +37,14 @@ button:hover {
   opacity: 0.8;
 }
 
-/* Extra styles for the cancel button */
+ Extra styles for the cancel button 
 .cancelbtn {
   width: auto;
   padding: 10px 18px;
   background-color: #f44336;
 }
 
-/* Center the image and position the close button */
+ Center the image and position the close button 
 .imgcontainer {
   text-align: center;
   margin: 24px 0 12px 0;
@@ -65,30 +65,30 @@ span.psw {
   padding-top: 16px;
 }
 
-/* The Modal (background) */
+ The Modal (background) 
 .modal {
-  display: block; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: block;  Hidden by default 
+  position: fixed;  Stay in place 
+  z-index: 1;  Sit on top 
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;  Full width 
+  height: 100%;  Full height 
+  overflow: auto;  Enable scroll if needed 
+  background-color: rgb(0,0,0);  Fallback color 
+  background-color: rgba(0,0,0,0.4);  Black w/ opacity 
   padding-top: 60px;
 }
 
-/* Modal Content/Box */
+ Modal Content/Box 
 .modal-content {
   background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  margin: 5% auto 15% auto;  5% from the top, 15% from the bottom and centered 
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 80%;  Could be more or less, depending on screen size 
 }
 
-/* The Close Button (x) */
+ The Close Button (x) 
 .close {
   position: absolute;
   right: 25px;
@@ -104,7 +104,7 @@ span.psw {
   cursor: pointer;
 }
 
-/* Add Zoom Animation */
+ Add Zoom Animation 
 .animate {
   -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.6s
@@ -120,7 +120,7 @@ span.psw {
   to {transform: scale(1)}
 }
 
-/* Change styles for span and cancel button on extra small screens */
+ Change styles for span and cancel button on extra small screens 
 @media screen and (max-width: 300px) {
   span.psw {
      display: block;
@@ -133,14 +133,9 @@ span.psw {
 </style>
 </head>
 <body>
-
-<h2>Modal Login Form</h2>
-
-<button onclick='document.getElementById('id01').style.display='block' style='width:auto;'>Login</button>
-
 <div id='id01' class='modal'>
   
-  <form class='modal-content animate' action='/action_page.php' method='post'>
+  <form class='modal-content animate' action='setup_login.php' method='post'>
     <div class='imgcontainer'>
       <span onclick='document.getElementById('id01').style.display='none'' class='close' title='Close Modal'>&times;</span>
       <img src='img_avatar2.png' alt='Avatar' class='avatar'>
@@ -181,7 +176,7 @@ window.onclick = function(event) {
 </body>
 </html>";
 exit;
-}
+}*/
 ?>
 
 
@@ -221,6 +216,8 @@ exit;
   <!-- <link href="assets/css/variables-purple.css" rel="stylesheet"> -->
   <!-- <link href="assets/css/variables-red.css" rel="stylesheet"> -->
   <!-- <link href="assets/css/variables-pink.css" rel="stylesheet"> -->
+  <!--bootstrap css!-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -247,69 +244,56 @@ exit;
 
       <nav id="navbar" class="navbar">
         <ul>
-
-          <li class="dropdown"><a href="#"><span>Home</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="login.php" >Login</a></li>
-              <li><a href="index-2.html">Home 2 - index-2.html</a></li>
-              <li><a href="index-3.html">Home 3 - index-3.html</a></li>
-              <li><a href="index-4.html">Home 4 - index-4.html</a></li>
-            </ul>
-          </li>
-
-          <li><a class="nav-link scrollto" href="index.html#about">Sign In</a></li>
-          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
+        <li><a style="border-bottom:1px solid #0ea2bd"  class="nav-link scrollto" href="index.php">Home</a></li>
+          <?php
+          if(isset($_SESSION['Id'])){
+          echo"<li><a class='nav-link scrollto' href='login.php'>Sign In</a></li>";
+          }
+          
+          ?>
+          <li><a class="nav-link scrollto" href="business.php">Services</a></li>
           <li><a class="nav-link scrollto" href="index.html#portfolio">Profile</a></li>
-          <li><a class="nav-link scrollto" href="index.html#team">Clients</a></li>
-          <li><a href="blog.html">Blog</a></li>
           <li class="dropdown megamenu"><a href="#"><span>Food Items</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li>
                 <a href="#">Grains</a>
                 <a href="#">Spices</a>
                 <a href="#">Vegies</a>
-              </li>
-              <li>
                 <a href="#">Fruits</a>
-                <a href="#">Column 2 link 2</a>
-                <a href="#">Column 3 link 3</a>
+                <a href="#">Backery Items</a>
               </li>
-              <li>
-                <a href="#">Column 3 link 1</a>
-                <a href="#">Column 3 link 2</a>
-                <a href="#">Column 3 link 3</a>
-              </li>
-              <li>
-                <a href="#">Column 4 link 1</a>
-                <a href="#">Column 4 link 2</a>
-                <a href="#">Column 4 link 3</a>
-              </li>
+              
             </ul>
           </li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <li class="dropdown megamenu"><a href="#"><span>Industrial Raw</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
+              <li>
+                <a href="#">Sugarcane</a>
+                <a href="#">Cotton</a>
+                <a href="#">Jute</a>
+                <a href="#">milk</a>
+                <a href="#">Big Tomatoes</a>
+               
               </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
+              
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
       </nav><!-- .navbar -->
-
-      <a class="btn-getstarted scrollto" href="index.html#about">Get Started</a>
-
+      <?php
+          if(isset($_SESSION['Id'])){
+          echo"<a class='btn-getstarted scrollto' href='logout.php'>Logout</a>";
+    
+        }
+          else{
+            echo"<a class='btn-getstarted scrollto' href='login.php'>Get Started</a>";
+          
+          }
+          
+          ?>
+      
     </div>
   </header><!-- End Header -->
 
@@ -317,7 +301,46 @@ exit;
 
 
   <main id="main">
-
+<div class="container" style="margin-top: 10%; margin-bottom:40%">
+<div id="carouselExampleCaptions" class="carousel slide  " " data-bs-ride="false">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./images/groc.jpg" class="d-block w-100 " alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="./images/farmer.jpg" class="d-block w-100 " style="height: 30%;" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="./images/man.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
       <!-- Vendor JS Files -->
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -331,7 +354,9 @@ exit;
   <script src="assets/js/main.js"></script>
 
   <!-- Template Main JS File -->
-  
+  <!--bootrap js!-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 </body>
 
 </html>

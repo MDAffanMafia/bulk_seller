@@ -1,12 +1,10 @@
 <?php
 session_start();
-/*
-if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true)
-{
-    header("location: login.php");
-    exit;
+if(!isset($_SESSION['Id'])){
+  header("location: login.php");
 }
-*/
+
+
  ?>
 
 
@@ -83,13 +81,36 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true)
   <p> <b></b> </p> <br>
     </div>
   <form class="" action="upload_items.php" method="POST" >
+  <div class="input_items">
+   <div class="divla"><label>Product</label> </div> 
+   <select class="enter" name="filter" id="filterre">
+            <option value="Grains">Grains</option>
+            <option value="Spices">Spices</option>
+            <option value="Fruits">Fruits</option>
+            <option value="Backery Items">Bakery Items</option>
+            <option value="Sugarcane">Sugarcane</option>
+            <option value="Cotton">Cotton</option>
+            <option value="Jute">Jute</option>
+            <option value="milk">Milk</option>
+            <option value="BigT">Big Tomatoes</option>
+          </select>
+   </div>
    <div class="input_items">
    <div class="divla"><label>Price</label> </div> 
    <input class="enter"  type="number"  placeholder="Price" name="price" value="">
    </div>
    <div class="input_items">
   <div class="divla"> <label>Currency</label></div>    
-   <input class="enter" type="text"   id="currency" placeholder="Rs" name="currency" value="">
+   <select class="enter" type="text"   id="currency" placeholder="Rs" name="currency" value="">
+            <option value="Grains">INR</option>
+            <option value="Spices">USD</option>
+            <option value="Fruits">JPY</option>
+            <option value="Backery Items">GBP</option>
+            <option value="Sugarcane">CHF</option>
+            <option value="Cotton">CAD</option>
+            <option value="Jute">AUS DOLLOR</option>
+            <option value="milk">ZAR</option>
+          </select>
    </div>
    <div class="input_items">
     <div class="divla"><label>Available</label></div>

@@ -4,7 +4,7 @@ if(isset($_POST['upload']) )
 {
     include 'database_connectivity.php';
    $user_name=$_SESSION['username'];
-    $product_name="sugarcane";
+    $product_name=$_POST['filter'];
     $price=$_POST['price'];
     $currency=$_POST['currency'];
     $available=$_POST['available'];

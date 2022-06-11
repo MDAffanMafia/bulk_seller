@@ -234,64 +234,39 @@ window.onclick = function(event) {
       </a>
 
       <nav id="navbar" class="navbar">
-        <ul>
-
-          <li class="dropdown"><a href="#"><span>Home</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="login.php" >Login</a></li>
-              <li><a href="index-2.html">Home 2 - index-2.html</a></li>
-              <li><a href="index-3.html">Home 3 - index-3.html</a></li>
-              <li><a href="index-4.html">Home 4 - index-4.html</a></li>
-            </ul>
-          </li>
-
-          <li><a class="nav-link scrollto" href="index.html#about">Sign In</a></li>
-          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
+      <ul>
+        <li><a style="border-bottom:1px solid #0ea2bd"  class="nav-link scrollto" href="index.php">Home</a></li>
+        <li><a class="nav-link scrollto" href="login.php">Sign In</a></li>
+          <li><a class="nav-link scrollto" href="business.php">Services</a></li>
           <li><a class="nav-link scrollto" href="index.html#portfolio">Profile</a></li>
-          <li><a class="nav-link scrollto" href="index.html#team">Clients</a></li>
-          <li><a href="blog.html">Blog</a></li>
           <li class="dropdown megamenu"><a href="#"><span>Food Items</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li>
                 <a href="#">Grains</a>
                 <a href="#">Spices</a>
                 <a href="#">Vegies</a>
-              </li>
-              <li>
                 <a href="#">Fruits</a>
-                <a href="#">Column 2 link 2</a>
-                <a href="#">Column 3 link 3</a>
+                <a href="#">Backery Items</a>
               </li>
-              <li>
-                <a href="#">Column 3 link 1</a>
-                <a href="#">Column 3 link 2</a>
-                <a href="#">Column 3 link 3</a>
-              </li>
-              <li>
-                <a href="#">Column 4 link 1</a>
-                <a href="#">Column 4 link 2</a>
-                <a href="#">Column 4 link 3</a>
-              </li>
+              
             </ul>
           </li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <li class="dropdown megamenu"><a href="#"><span>Industrial Raw</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
+              <li>
+                <a href="#">Sugarcane</a>
+                <a href="#">Cotton</a>
+                <a href="#">Jute</a>
+                <a href="#">milk</a>
+                <a href="#">Big Tomatoes</a>
+               
               </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
+              
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
+        </ul>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
       </nav><!-- .navbar -->
@@ -319,68 +294,26 @@ window.onclick = function(event) {
     <br>
     
     </div>
-    <nav id="navbar" class="navbar">
+    <nav id="navbar" class="navbar" style="background-color:aliceblue">
         <ul>
         <a style="margin-right:0px;" href="add_item.php"><button   style="background-color:#0ECB81;width:100%;"onclick="add_item.php">Buy</button></a>
         <a style="padding:10px;margin-right:0px;" href="require_upload.php"><button   style="background-color:red;height:50px;" >Sell</button></a>
-
-          <li class="dropdown"><a href="#"><span>Home</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="login.php" >Login</a></li>
-              <li><a href="index-2.html">Home 2 - index-2.html</a></li>
-              <li><a href="index-3.html">Home 3 - index-3.html</a></li>
-              <li><a href="index-4.html">Home 4 - index-4.html</a></li>
-            </ul>
-          </li>
-
-          <li><a class="nav-link scrollto" href="index.html#about">Sign In</a></li>
-          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="index.html#portfolio">Profile</a></li>
-          <li><a class="nav-link scrollto" href="index.html#team">Clients</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown megamenu"><a href="#"><span>Food Items</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li>
-                <a href="#">Grains</a>
-                <a href="#">Spices</a>
-                <a href="#">Vegies</a>
-              </li>
-              <li>
-                <a href="#">Fruits</a>
-                <a href="#">Column 2 link 2</a>
-                <a href="#">Column 3 link 3</a>
-              </li>
-              <li>
-                <a href="#">Column 3 link 1</a>
-                <a href="#">Column 3 link 2</a>
-                <a href="#">Column 3 link 3</a>
-              </li>
-              <li>
-                <a href="#">Column 4 link 1</a>
-                <a href="#">Column 4 link 2</a>
-                <a href="#">Column 4 link 3</a>
-              </li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
-        </ul>
+       
+      </ul>
+      <form style="display:inline;width:60%; " action="fetch_items.php" method="POST">
+          <select style="display:inline;background-color:#33363d;color:#ebe7e6;border-radius:2px solid ;margin-left:20%;size: 16px;padding-top:5px;padding-bottom:5px;padding-right:30%;padding-left:3px;" name="filter" id="filterre">
+            <option value="Grains">Grains</option>
+            <option value="Spices">Spices</option>
+            <option value="Fruits">Fruits</option>
+            <option value="Backery Items">Backery Items</option>
+            <option value="Sugarcane">Sugarcane</option>
+            <option value="Cotton">Cotton</option>
+            <option value="Jute">Jute</option>
+            <option value="milk">Milk</option>
+            <option value="BigT">Big Tomatoes</option>
+          </select>
+         <button  type="submit" style="background-color:#0ea2bd;color:cornsilk;width:12%;border-radius:2px solid;size: 10px;padding:5px">Search</button>
+         </form>
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
       </nav>
   </header><!-- End Header -->
@@ -394,7 +327,7 @@ window.onclick = function(event) {
 <div class="row gy-4">
 
 <section id="services" class="services">
-      <div class="container" style="display: absolute;margin-top:30%">
+      <div class="container" style="display: absolute;margin-top:20%">
       <?php
       
       include 'fetch_items.php';
