@@ -1,6 +1,2 @@
-Thanks for downloading this template!
-
-Template Name: HeroBiz
-Template URL: https://bootstrapmade.com/herobiz-bootstrap-business-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+A website that will be a mediater between buyer and seller .
+This will give the best deals for the buyers as well as good clients for the seller.
